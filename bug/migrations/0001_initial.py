@@ -1,4 +1,10 @@
 from django.db import migrations, models
+from django.conf import settings
+import django.contrib.auth.models
+import django.utils.timezone
+import django.db.models.deletion
+from django.db import migrations, models
+import django.contrib.auth.validators
 
 
 class Migration(migrations.Migration):
@@ -6,7 +12,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        # Specify any dependencies if applicable
+        ('auth', '0011_update_proxy_permissions'),
     ]
 
     operations = [
@@ -25,3 +31,26 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+        
+    options={
+                'swappable': 'AUTH_USER_MODEL',
+            },
+    managers=[
+                ('objects', django.contrib.auth.models.UserManager()),
+            ],
+        
+    
+    
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+
+

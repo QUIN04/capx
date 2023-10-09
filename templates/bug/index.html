@@ -1,0 +1,68 @@
+{% comment %} <a href="{% url "index" %}">Home</a>
+<a href="{% url "detail" %}">Detail</a>
+<a href="{% url "list" %}">List</a> {% endcomment %}
+
+{% load static %}
+<html>
+<head>
+    <title> Bug_Report_Form </title> 
+<link href="{% static 'bug/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'bug/css/image.jpg' %}" rel="stylesheet">
+
+
+</head>
+    <body>
+        <nav class="navbar navbar-inverse" style="background-color: #152238; height: 100px; position:fixed; width:100%; z-index: 1000000; top:0;">
+            <div class="container-fluid">
+              
+              <div class="navbar-header">
+                <ul>
+                    <li><a class="navbar-bar" href="{% url 'index' %}">Home</a></li>
+                    <li> <a class="navbar-bar" href="{% url 'detail' %}">Detail</a></li>
+                    <li><a class="navbar-bar" href="{% url 'list' %}">List</a></li>
+                </ul>
+              </div>
+              
+          
+            </ul>
+              </div>
+            </div>
+          </nav>
+          <br><br><br>
+
+    <div class="report-form">
+        <h1>Report Bug</h1>
+            <form method="POST" action="{% url "list" %}">    
+            {% csrf_token %}
+            <p>Description</p>
+            <input type="text" name="description" placeholder="Description" required="">
+            <p>Bug Type</p>
+            <input type="text" name="bug_type" placeholder="Bug_Type" required="">
+            <p>Report Date</p>
+            <input type="date" name="date" placeholder="Date" required="">
+            <p>Status</p>
+            <input type="text" name="status" placeholder="Status" required="">
+
+        
+           <br><br>
+            <input type="submit" name="submit" value="Register">
+            {% comment %} <a href="{% url "detail" %}" style="font-weight: bold; font-size: 20px">Post</a> {% endcomment %}
+            </form>
+            <div class="form-group">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+
+                    <div class="alert alert-success" style="color:red;"> {{ message }}</div>
+
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        </div>    
+    </body>
+</html>
+
+
+
+

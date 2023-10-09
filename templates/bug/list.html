@@ -1,0 +1,55 @@
+{% load static %}
+
+<link href="{% static 'bug/css/list.css' %}" rel="stylesheet">
+<link href="{% static 'bug/css/bootstrap.min.css' %}" rel="stylesheet">
+
+<nav class="navbar navbar-inverse" style="background-color: #152238; height: 100px; position:fixed; width:100%; z-index: 1000000; top:0;">
+    <div class="container-fluid">
+      
+      <div class="navbar-header">
+        <ul>
+            <li><a class="navbar-bar" href="{% url 'index' %}">Home</a></li>
+            <li> <a class="navbar-bar" href="{% url 'detail' %}">Detail</a></li>
+            <li><a class="navbar-bar" href="{% url 'list' %}">List</a></li>
+        </ul>
+      </div>
+      
+  
+    </ul>
+      </div>
+    </div>
+  </nav>
+  
+<br>
+<h2>Bug List</h2> 
+<br><br>
+
+<table class="list">
+    <thead>
+        <tr>
+          <th>Description</th>
+          <th>Bug Type</th>
+          <th>Report Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cancel button on aboutpage blurs on clicking</td>
+          <td>Workflow bug</td>
+          <td>09/10/2023</td>
+          <td>O</td>
+        </tr>
+        <tr>
+          <td>Date slot highlights red with valid input</td>
+          <td>Workflow bug</td>
+          <td>07/10/2023</td>
+          <td>IP</td>
+        </tr>
+        <tr>
+            <td>Cancel button on all pages takes user back to homepage</td>
+            <td>Logical bug</td>
+            <td>05/10/2023</td>
+            <td>C</td>
+          </tr>
+</table>

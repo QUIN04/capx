@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* For the navbar */
+.navbar-header {
+    background-color: #f4f4f4;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-header li {
+    margin: 0 10px;
+  }
+  
+  .navbar-header a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .navbar-header a:hover {
+    background-color: #ddd;
+  }
+  
+  .navbar-header a.active {
+    background-color: #555;
+    color: #fff;
+  }
+  
+ 
+
+/* For the form */
+.report-form{
+    font-family: sans-serif;
+    width: 375px;
+    height: 520px;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 10px;
+   
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.report-form p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.report-form input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.report-form input[type="text"], input[type="date"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+}
+
+.report-form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    box-shadow: #fff;
+}
+.report-form input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: darkgray;
+    color: #000;
+}
+
+.report-form a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+.report-form a:hover
+{
+    color: darkgrey;
+}
+
